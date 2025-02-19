@@ -83,7 +83,7 @@ To package this web application into a desktop application (`.exe` file), you'll
 
 1. **Install Node.js and npm** if not already installed.
 
-2. **Install Electron:**
+2. **Install:**
 
    ```bash
    npm install
