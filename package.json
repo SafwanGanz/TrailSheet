@@ -1,0 +1,40 @@
+{
+  "name": "TrailSheet",
+  "version": "1.0.0",
+  "main": "main.js",
+  "author": "SafwanGanz",
+  "description": "A spreadsheet application built with Electron and LuckySheet",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-builder build --win",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.trailsheet.app",
+    "productName": "TrailSheet",
+    "copyright": "Copyright © 2023 SyntaxTrail",
+    "directories": {
+      "output": "dist"
+    },
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "./assets/icon.jpg",
+      "artifactName": "${productName}-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^34.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
