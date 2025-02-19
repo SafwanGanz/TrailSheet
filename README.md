@@ -131,6 +131,4 @@ Contributions are what make the open-source community such an amazing place to l
 
 - [LuckySheet](https://github.com/mengshukeji/Luckysheet) - for providing the backbone of this project.
 - [jQuery](https://jquery.com/) - for simplifying JavaScript interactions.
-- All contributors and testers who help make this project better.
-
 ---
