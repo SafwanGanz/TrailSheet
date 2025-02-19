@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![GitHub](https://img.shields.io/github/stars/SafwanGanz/TrailSheet?style=social)](https://github.com/SafwanGanz/TrailSheet)
 
-A sleek, modern take on the classic spreadsheet experience using LuckySheet.
+A sleek, modern take on the classic spreadsheet experience using TrailSheet.
 
 ## 🚀 Overview
 
@@ -79,62 +79,43 @@ For development or extending functionality:
 
 ## 🪟 Creating an .exe File
 
-To package this web application into a desktop application (`.exe` file), you'll need to use Electron with tools like `electron-packager`. Here's how you can do it from the command line:
+To package this web application into a desktop application (`.exe` file), you'll need to use Electron:
 
-1. **Install Node.js and npm** if not already installed. This is required for npm packages.
+1. **Install Node.js and npm** if not already installed.
 
-2. **Install Electron and electron-packager:**
-
-   ```bash
-   npm install electron --save-dev
-   npm install electron-packager --global
-   ```
-
-3. **Create a `main.js` for Electron:**
-
-   ```javascript
-   const { app, BrowserWindow } = require('electron')
-   const path = require('path')
-
-   function createWindow () {
-     const win = new BrowserWindow({
-       width: 800,
-       height: 600,
-       webPreferences: {
-         nodeIntegration: true,
-         contextIsolation: false
-       }
-     })
-
-     win.loadFile('index.html')
-   }
-
-   app.whenReady().then(createWindow)
-
-   app.on('window-all-closed', () => {
-     if (process.platform !== 'darwin') app.quit()
-   })
-
-   app.on('activate', () => {
-     if (BrowserWindow.getAllWindows().length === 0) createWindow()
-   })
-   ```
-
-4. **Package the App:**
+2. **Install Electron:**
 
    ```bash
-   electron-packager . TrailSheet --platform=win32 --arch=x64 --out=release-builds
+   npm install
    ```
 
-   This command will package your application into an `.exe` file for Windows x64 architecture. Adjust the platform and architecture as needed.
+2. **Package the App:**
 
-5. **Find Your .exe:** The resulting `.exe` file will be in the `release-builds` folder.
+   ```bash
+   npm run package
+   ```
 
-**Note:** Ensure you're using an admin command prompt or have the necessary permissions when executing these commands.
+   This command will create your `.exe` file in the `dist` folder.
+
+## 🖥 Running HTML in an HTTP Server
+
+For development or to ensure all resources load correctly, run `index.html` using an HTTP server:
+
+- **Install a simple HTTP server:**
+  ```bash
+  npm install -g http-server
+  ```
+
+- **Run the server:**
+  ```bash
+  http-server
+  ```
+
+  Navigate your browser to `localhost:8080` to view your application.
 
 ## 🛡️ License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 🤝 Contributing
 
@@ -153,5 +134,3 @@ Contributions are what make the open-source community such an amazing place to l
 - All contributors and testers who help make this project better.
 
 ---
-
-Feel free to reach out or contribute to enhance this tool further!
