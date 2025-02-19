@@ -13,7 +13,7 @@
   "build": {
     "appId": "com.trailsheet.app",
     "productName": "TrailSheet",
-    "copyright": "Copyright © 2023 SyntaxTrail",
+    "copyright": "Copyright © 2025 SyntaxTrail",
     "directories": {
       "output": "dist"
     },
